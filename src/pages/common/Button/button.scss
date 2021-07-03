@@ -4,8 +4,8 @@
   font-weight: bold;
   font-size: 10px;
   background-color: var(--darkestGray);
+  border-radius: var(--borderRadius);
   border: 0;
-  border-radius: 4px;
   &:hover {
     background-color: var(--gray);
   }

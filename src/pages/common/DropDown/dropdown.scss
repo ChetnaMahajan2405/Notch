@@ -17,7 +17,7 @@
 .option--header {
   @include option();
   border: 1px solid var(--lighterGray);
-  border-radius: 4px;
+  border-radius: var(--borderRadius);
 }
 .option--dropdown {
   @include option();

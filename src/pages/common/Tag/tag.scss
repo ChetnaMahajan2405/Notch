@@ -7,7 +7,7 @@
     border-radius: 10px;
     color: var(--darkGray);
   } @else {
-    border-radius: 4px;
+    border-radius: var(--borderRadius);
     background-color: var(--gray);
     color: var(--white);
   }
