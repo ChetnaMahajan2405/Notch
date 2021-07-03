@@ -1,0 +1,41 @@
+@mixin tag($circle: false) {
+  padding: 5px 10px;
+  font-size: 10px;
+  font-weight: bold;
+
+  @if $circle {
+    border-radius: 10px;
+    color: var(--darkGray);
+  } @else {
+    border-radius: 4px;
+    background-color: var(--gray);
+    color: var(--white);
+  }
+}
+
+.square-tag {
+  @include tag($circle: false);
+  text-transform: uppercase;
+}
+.oval-tag-paid {
+  @include tag($circle: true);
+  background-color: var(--green);
+  text-transform: uppercase;
+}
+
+.oval-tag-delivered {
+  @include tag($circle: true);
+  background-color: var(--lightPurple);
+  text-transform: uppercase;
+}
+
+.oval-tag-other {
+  @include tag($circle: true);
+  background-color: var(--lightBlue);
+  text-transform: uppercase;
+}
+
+.oval-tag-first {
+  @include tag($circle: true);
+  background-color: var(--yellow);
+}

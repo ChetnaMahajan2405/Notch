@@ -1,0 +1,12 @@
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 300px;
+}
+
+@media screen and (max-width: 991px) {
+  .row {
+    height: 200px;
+  }
+}

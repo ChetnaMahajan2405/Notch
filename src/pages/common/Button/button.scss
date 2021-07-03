@@ -1,0 +1,15 @@
+.dark {
+  padding: 10px;
+  color: var(--white);
+  font-weight: bold;
+  font-size: 10px;
+  background-color: var(--darkestGray);
+  border: 0;
+  border-radius: 4px;
+  &:hover {
+    background-color: var(--gray);
+  }
+  &:active {
+    transform: translateY(0.5px);
+  }
+}

@@ -1,0 +1,33 @@
+:root {
+  --purple: #38127A;
+  --yellow: #FDE769;
+  --lightPurple: #C5C5FE;
+  --gray: #454545;
+  --white: #FFFFFF;
+  --darkGray: #4F5F5B;
+  --green: #B2DECC;
+  --lighterGray: #AEBCBE;
+  --darkestGray: #03282C;
+  --black: #000000;
+  --lightGray: #ECECEC;
+  --lightBlue: #A5D6EA;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  color: var(--darkGray);
+  font-size: 12px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

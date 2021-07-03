@@ -1,0 +1,91 @@
+$headers: "STATUS", "DELIVERY DAY", "SUPPLIER", "TOTAL";
+
+@mixin responive-tables-large() {
+  @each $list-headings in $headers {
+    $i: index($headers, $list-headings);
+    tbody tr td:nth-of-type(#{$i}):before {
+      content: $list-headings;
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@mixin space {
+  
+}
+
+.space-left {
+  margin-left: 10px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.arrow {
+  display: none;
+  float: left;
+  margin-left: 5px;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+
+  tr {
+    padding: 0.35em;
+  }
+
+  th,
+  td {
+    padding: 1.25em;
+    text-align: center;
+    border-bottom: 1px solid var(--lightGray);
+    font-weight: bold;
+  }
+
+  th {
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .arrow {
+    display: inline;
+  }
+
+  table {
+    @include responive-tables-large();
+    border: 0;
+    caption {
+      font-size: 1.3em;
+    }
+
+    thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+
+    tr {
+      display: block;
+      margin-bottom: 0.625em;
+    }
+
+    td {
+      display: block;
+      text-align: right;
+    }
+  }
+}

@@ -1,0 +1,78 @@
+@mixin option() {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  width: 250px;
+  padding: 10px;
+  .label {
+    color: var(--black);
+  }
+}
+
+.option {
+  display: flex;
+}
+
+.option--header {
+  @include option();
+  border: 1px solid var(--lighterGray);
+  border-radius: 4px;
+}
+.option--dropdown {
+  @include option();
+  border-bottom: 1px solid var(--lighterGray);
+  &:hover {
+    background-color: var(--lightGray);
+  }
+}
+
+.option--list {
+  height: 150px;
+  overflow: scroll;
+}
+
+.container {
+  padding-top: 20px;
+  height: 300px;
+}
+
+.reset--container {
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+.reset--mobile {
+  display: none; 
+}
+
+.dropdown--header {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: var(--black);
+}
+
+@media screen and (max-width: 991px) {
+  .container {
+    padding-top: 20px;
+    height: 200px;
+  }
+
+  .option--list {
+    height: 80px;
+  }
+
+  .option--header,
+  .option--dropdown {
+    width: 150px;
+  }
+
+  .reset--container {
+    display: none;
+  }
+
+  .reset--mobile {
+    display: block;
+    margin-top: 10px;
+  }
+}
